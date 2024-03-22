@@ -1,4 +1,4 @@
-FRONT : 
+FRONT : index.php, style.css
 
 BACK : 
 
