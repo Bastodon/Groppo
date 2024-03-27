@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(165, 0, 0);
+    position: relative;
+    height: 80px;
+    top: 0;
+}
+
+header >* {
+    position: absolute;
+    margin: 0 30px 0 30px;
+    color: white;
+}
+
+header img {
+    width: 80px;
+}
+
+header>ul {
+    right: 0;
+    list-style: none;
+    margin-top: 30px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a>h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 100px;
+}
+
+footer {
+    bottom: 0;
+    color: rgb(179, 179, 179);
+    font-family: 'Trebuchet MS';
+}
+
+
+/* Retirer style liens */
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
