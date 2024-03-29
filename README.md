@@ -1,5 +1,5 @@
 FRONT : index.php, style.css
 
-BACK : 
+BACK : db.php
 
-BDD : 
+BDD : create-groppo-database.sql
