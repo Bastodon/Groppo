@@ -11,7 +11,6 @@ CREATE TABLE `Contacts` (
     `prenoms` varchar(50),
     `telephone` varchar(15) DEFAULT NULL,
     `region` varchar(50),
-    `age` int DEFAULT NULL,
     PRIMARY KEY (`id`)
     ) CHARSET=utf8mb4;
     
