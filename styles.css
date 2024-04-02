@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+
+header {
+    background-color: rgb(165, 0, 0);
+    position: relative;
+    height: 80px;
+    top: 0;
+}
+
+header >* {
+  position: absolute;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none; 
+}
+
+header img {
+    width: 70px;
+    margin-left: 20px;
+}
+
+header a>h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 100px;
+}
+
+header h2 {
+  left: 45%;
+  list-style: none;
+  margin-top: 30px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+footer {
+    bottom: 0;
+    color: rgb(179, 179, 179);
+    font-family: 'Trebuchet MS';
+    position:absolute;
+}
+
+
+
+/* Retirer le style des liens */
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }

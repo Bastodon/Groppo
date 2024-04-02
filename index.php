@@ -12,7 +12,7 @@
     <title>Groppo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="icon" type="image/x-icon" href="assets/grop.ico">
   </head>
@@ -22,9 +22,9 @@
         <header>
             <a href="index.php"> <img src="assets/grop.ico" alt="logo"> </a>
             <a href="index.php"> <h1> Groppo </h1> </a>
-            <ul>
-                <li> Rechercher </li>
-            </ul>
+            
+            <h2> Rechercher </h2>
+            
         </header>
 
         <div class="contact-main">
@@ -46,6 +46,10 @@
                     ?>  
                     
                     <td> <?php echo $row["id"]; ?> </td>
+                    <td> <?php echo $row["nom"]; ?> </td>
+                    <td> <?php echo $row["prenoms"]; ?> </td>
+                    <td> <?php echo $row["telephone"]; ?> </td>
+                    <td> <?php echo $row["region"]; ?> </td>
                     
                     <?php
                         }
