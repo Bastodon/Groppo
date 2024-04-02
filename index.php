@@ -45,18 +45,25 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                     ?>  
                     
-                    <td> <?php echo $row["id"]; ?> </td>
-                    <td> <?php echo $row["nom"]; ?> </td>
-                    <td> <?php echo $row["prenoms"]; ?> </td>
-                    <td> <?php echo $row["telephone"]; ?> </td>
-                    <td> <?php echo $row["region"]; ?> </td>
+                    <tr>
+
+                        <td> <?php echo $row["id"]; ?> </td>
+                        <td> <?php echo $row["nom"]; ?> </td>
+                        <td> <?php echo $row["prenoms"]; ?> </td>
+                        <td> <?php echo $row["telephone"]; ?> </td>
+                        <td> <?php echo $row["region"]; ?> </td>
                     
+                    </tr>
+
                     <?php
                         }
                     ?>      
                 </tbody>
 
             </table>
+
+            <button class="button"> Ajouter </button>
+            <button class="button"> Editer </button>
         </div>
 
         <footer>

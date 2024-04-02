@@ -15,3 +15,4 @@ CREATE TABLE `Contacts` (
     ) CHARSET=utf8mb4;
     
 INSERT INTO `Contacts` VALUES (1, 'Thomas', 'LERAY', '0608860598', 'Normandie');
+INSERT INTO `Contacts` VALUES (2, 'Test','Alabakamasumatrawabakazalumbuk',NULL,NULL);
