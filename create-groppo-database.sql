@@ -2,8 +2,8 @@ DROP DATABASE IF EXISTS `SQL_GROPPO`;
 CREATE DATABASE `SQL_GROPPO`;
 USE `SQL_GROPPO`;
 
-SET NAMES utf8mb4;
-SET character_set_client = utf8mb4;
+SET NAMES utf8;
+SET character_set_client = utf8;
 
 CREATE TABLE `Contacts` (
 	`id` int AUTO_INCREMENT NOT NULL,
@@ -14,4 +14,4 @@ CREATE TABLE `Contacts` (
     PRIMARY KEY (`id`)
     ) CHARSET=utf8mb4;
     
-INSERT INTO `Contacts` VALUES (1, 'Thomas', 'LERAY', '0608860598', 'Normandie', 25);
+INSERT INTO `Contacts` VALUES (1, 'Thomas', 'LERAY', '0608860598', 'Normandie');
