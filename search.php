@@ -23,12 +23,31 @@
         <!-- Entête en rouge, avec logo et titre cliquable et barre de recherche -->
         <header>
             <a href="index.php"> <img src="assets/grop.ico" alt="logo"> </a>
-            <a href="index.php"> <h1> Groppo </h1> </a>        
+            <a href="index.php"> <h1> Groppo </h1> </a>
         </header>
 
         <!-- Tableau principal. Affiche toutes les entrées de la base de donnée -->
         <div class="contact-main">
-            <table class="table">
+
+            <form method="post">
+                <div class="field">
+                    <input class="input is-focused" name="search" type="text" placeholder="Nom">
+                    <button class="button is-white" name="submit"> Rechercher </button>
+                </div>
+            </form>
+
+            <hr>
+
+            <table class="table is-bordered">
+
+                <?php
+                    if (isset($_POST['submit'])){
+                        $search=$_POST['search'];
+
+                        $sql="SELECT * FROM contacts WHERE nom LIKE " . '"' . $search .'"';
+                        $result = mysqli_query($con, $sql);
+                    }
+                ?>
 
                 <thead>
                     <!-- Entête du tableau -->
@@ -72,7 +91,6 @@
             </table>
 
             <button class="button" onclick="window.location.href='ajout.php';"> Ajouter </button>
-            <button class="button is-white" onclick="window.location.href='search.php';"> Recherche </button>
         </div>
 
         <footer>
