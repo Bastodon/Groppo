@@ -19,6 +19,7 @@
 
     <body>
         
+        <!-- Entête en rouge, avec logo et titre cliquable et barre de recherche -->
         <header>
             <a href="index.php"> <img src="assets/grop.ico" alt="logo"> </a>
             <a href="index.php"> <h1> Groppo </h1> </a>
@@ -27,24 +28,33 @@
             
         </header>
 
+        <!-- Tableau principal. Affiche toutes les entrées de la base de donnée -->
         <div class="contact-main">
             <table class="table">
 
                 <thead>
+                    <!-- Entête du tableau -->
                 <tr>
                     <td> ID </td>
                     <td> Nom </td>
                     <td> Prénom(s) </td>
                     <td> Telephone </td>
                     <td> Region </td>
+                    <td> Editer </td>
+                    <td> Supprimer </td>
                 </tr>
                 </thead>
 
                 <tbody>
+
+                    <!-- Récupération de la bdd. $i servira à récupérer l'id de chaque entrée pour les requêtes -->
                     <?php
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        $i=0;
+                        while ($row = mysqli_fetch_assoc($result)) 
+                        {
                     ?>  
                     
+                    <!-- Chaque ligne indique une donnée. Une icone de crayon et de poubelle servent à éditer ou supprimer l'entrée -->
                     <tr>
 
                         <td> <?php echo $row["id"]; ?> </td>
@@ -52,18 +62,20 @@
                         <td> <?php echo $row["prenoms"]; ?> </td>
                         <td> <?php echo $row["telephone"]; ?> </td>
                         <td> <?php echo $row["region"]; ?> </td>
+                        <td> <a href="edit_db.php?id=<?php echo $row["id"]; ?>"> <img src="assets/pen.ico" alt="edit"> </a> </td>
+                        <td> <a href="delete_db.php?id=<?php echo $row["id"]; ?>"> <img src="assets/bin.ico" alt="delete"> </a> </td>
                     
                     </tr>
 
                     <?php
+                        $i++;
                         }
                     ?>      
                 </tbody>
 
             </table>
 
-            <button class="button"> Ajouter </button>
-            <button class="button"> Editer </button>
+            <button class="button" onclick="window.location.href='ajout.php';"> Ajouter </button>
         </div>
 
         <footer>
