@@ -1,6 +1,6 @@
 <?php
 
-    $con = mysqli_connect("localhost","root","","sql_groppo");
+    require_once('db.php');
 
     $sql = "DELETE FROM contacts WHERE id='" . $_GET["id"] . "'";
 

@@ -25,7 +25,17 @@
             <a href="index.php"> <img src="assets/grop.ico" alt="logo"> </a>
             <a href="index.php"> <h1> Groppo </h1> </a>
             
-            <h2> Rechercher </h2>
+            <h2>
+                    <form method="post">
+                        <div class="field">
+                            <input class="input" name="select" type="text" placeholder="ID"> 
+                            <button class="button is-white" name="submit"> Rechercher</button>
+                        </div>
+                        <table class="table">
+
+                        </table>
+                    </form>
+            </h2>
             
         </header>
 

@@ -16,3 +16,4 @@ CREATE TABLE `Contacts` (
     
 INSERT INTO `Contacts` VALUES (1, 'LERAY', 'Thomas, Philippe, Laurent', '0605890691', 'Normandie');
 INSERT INTO `Contacts` VALUES (2, 'Test','Lorem ipsum dolor sit amet',NULL,NULL);
+INSERT INTO `Contacts` VALUES (3, 'Smith','John',NULL,'Eure');

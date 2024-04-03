@@ -1,9 +1,5 @@
 <?php
-        $con = mysqli_connect("localhost","root","","sql_groppo");
-
-        if (mysqli_connect_errno()) {
-            printf("", mysqli_connect_error());
-        }
+        require_once('db.php');
 
         if (count($_POST)>0) 
         {
@@ -42,7 +38,7 @@
         <div class="ajout-main">
             
             <form name="update" action="" method="post">
-                <div class="field">
+                <div class="field" hidden>
                     <label for="nom" class="label">ID</label>
                     <div class="control">
                         <input type="text" class="input is-danger" size="50" id="id" name="id" value="<?php echo $lig['id']; ?>" />
