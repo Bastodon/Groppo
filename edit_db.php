@@ -45,8 +45,9 @@
                 <div class="field">
                     <label for="nom" class="label">ID</label>
                     <div class="control">
-                        <input type="text" class="input" size="50" id="id" name="id" value="<?php echo $lig['id']; ?>" disabled />
+                        <input type="text" class="input is-danger" size="50" id="id" name="id" value="<?php echo $lig['id']; ?>" />
                     </div>
+                    <p class="help is-danger">À éditer à vos risques et périls...</p>
                 </div>
 
                 <div class="field">

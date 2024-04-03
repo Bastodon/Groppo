@@ -14,5 +14,5 @@ CREATE TABLE `Contacts` (
     PRIMARY KEY (`id`)
     ) CHARSET=utf8mb4;
     
-INSERT INTO `Contacts` VALUES (1, 'Thomas', 'LERAY', '0608860598', 'Normandie');
-INSERT INTO `Contacts` VALUES (2, 'Test','Alabakamasumatrawabakazalumbuk',NULL,NULL);
+INSERT INTO `Contacts` VALUES (1, 'LERAY', 'Thomas, Philippe, Laurent', '0605890691', 'Normandie');
+INSERT INTO `Contacts` VALUES (2, 'Test','Lorem ipsum dolor sit amet',NULL,NULL);

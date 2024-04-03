@@ -12,6 +12,7 @@
     <title>Groppo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <!-- CSS réalisé avec l'aide de Bulma (https://bulma.io) -->
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="icon" type="image/x-icon" href="assets/grop.ico">
