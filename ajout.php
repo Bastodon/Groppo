@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<!-- Contrairement à EDIT et DELETE, AJOUT a besoin d'initialiser la BDD de façon différente et ne peut pas faire appel à require_once() -->
+
 <html lang="fr">
 
   <head>
