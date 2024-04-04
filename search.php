@@ -26,26 +26,90 @@
             <a href="index.php"> <h1> Groppo </h1> </a>
         </header>
 
-        <!-- Tableau principal. Affiche toutes les entrées de la base de donnée -->
+
+
         <div class="contact-main">
 
+            <!-- Radio pour les filtres -->
             <form method="post">
-                <div class="field">
-                    <input class="input is-focused" name="search" type="text" placeholder="Nom">
-                    <button class="button is-white" name="submit"> Rechercher </button>
+                <div class="control">
+                    <label class="radio"> Filtres : </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="id" />
+                        ID
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="nom" checked/>
+                        Nom
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="prenoms" />
+                        Prénom(s)
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="telephone" />
+                        Telephone
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="region" />
+                        Région
+                    </label>
                 </div>
+
+                <div class="field">
+                    <input class="input is-focused" name="search" type="text" placeholder="ID,Nom,Prenom... (laisser vide pour afficher tableau entier)">
+                </div>
+
+                <div class="control">
+                    <label class="radio"> Trier par : </label>
+                    <label class="radio">
+                        <input type="radio" name="ordre" value="id" checked />
+                        ID
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="ordre" value="ASC"/>
+                        Prénoms [A-Z]
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="ordre" value="DESC"/>
+                        Prénoms [Z-A]
+                    </label>
+                </div>
+
+                <button class="button is-white" name="submit"> Rechercher </button>
+                
             </form>
+            
 
             <hr>
 
+
             <table class="table is-bordered">
 
+                <!-- Affichage des résultats. Si aucune entrée n'est donnée, le tableau entier est montré par défaut. -->
                 <?php
                     if (isset($_POST['submit'])){
                         $search=$_POST['search'];
+                        $radioval=$_POST['option'];
+                        $order=$_POST['ordre'];
 
-                        $sql="SELECT * FROM contacts WHERE nom LIKE " . '"' . $search .'"';
+                        if ($radioval=='id')
+                        {
+                            $sql="SELECT * FROM contacts WHERE $radioval = $search ";
+                        }else {
+                            $sql="SELECT * FROM contacts WHERE $radioval LIKE '%" . $search ."%'";
+                        }
+
+                        if ($order!='id')
+                        {
+                            $sql.= "ORDER BY prenoms $order";
+                        }
+
                         $result = mysqli_query($con, $sql);
+                        
+                        if (mysqli_num_rows($result)<= 0) {
+                            echo '<span class="tag is-large is-danger">Aucun résultat trouvé</span>';
+                        }
                     }
                 ?>
 
@@ -90,8 +154,10 @@
 
             </table>
 
-            <button class="button" onclick="window.location.href='ajout.php';"> Ajouter </button>
+            <button class="button" onclick="window.location.href='ajout.php';"> Nouveau </button>
         </div>
+
+
 
         <footer>
             <h4> Groppo, par Thomas LERAY 2024 </h4>

@@ -32,15 +32,15 @@
 
                 <thead>
                     <!-- Entête du tableau -->
-                <tr>
-                    <td> ID </td>
-                    <td> Nom </td>
-                    <td> Prénom(s) </td>
-                    <td> Telephone </td>
-                    <td> Region </td>
-                    <td> Editer </td>
-                    <td> Supprimer </td>
-                </tr>
+                    <tr>
+                        <td> ID </td>
+                        <td> Nom </td>
+                        <td> Prénom(s) </td>
+                        <td> Telephone </td>
+                        <td> Region </td>
+                        <td> Editer </td>
+                        <td> Supprimer </td>
+                    </tr>
                 </thead>
 
                 <tbody>
@@ -71,8 +71,8 @@
 
             </table>
 
-            <button class="button" onclick="window.location.href='ajout.php';"> Ajouter </button>
-            <button class="button is-white" onclick="window.location.href='search.php';"> Recherche </button>
+            <button class="button" onclick="window.location.href='ajout.php';"> Nouveau </button>
+            <button class="button is-white" onclick="window.location.href='search.php';"> Rechercher </button>
         </div>
 
         <footer>
