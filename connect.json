@@ -1,0 +1,9 @@
+{
+        "_commentaire": "Vous pouvez configurer vos identifiants de connexion ici" ,
+
+        "host": "localhost",
+        "user": "root", 
+        "password": "", 
+        "database": "sql_groppo",
+        "port": 3306
+}

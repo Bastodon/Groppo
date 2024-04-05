@@ -1,5 +1,6 @@
 <?php
 
+// N'a pas été utilisé pour ce projet //
 class contact
 {
     private $id;
@@ -25,6 +26,10 @@ class contact
 
     function getContact() {
         var_dump(get_object_vars($this));
+    }
+
+    function getJson() {
+        $myJSON = json_encode(var_dump(get_object_vars($this)));
     }
 
 }
