@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Contrairement à EDIT et DELETE, AJOUT a besoin d'initialiser la BDD de façon différente et ne peut pas faire appel à require_once() -->
+<!-- Par soucis de debug, la base de donnée n'est récupérée que sur ajout_db.php. Ici, on se contente de fournir le formulaire à l'utilisateur et le transmettre -->
 
 <html lang="fr">
 

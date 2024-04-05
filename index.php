@@ -1,4 +1,5 @@
 <?php
+    // Récupération de la base de données initiale //
     require_once('db.php');
     $query = "SELECT * FROM contacts";
     $result = mysqli_query($con, $query);
@@ -45,7 +46,7 @@
 
                 <tbody>
 
-                    <!-- Récupération de la bdd. $i servira à récupérer l'id de chaque entrée pour les requêtes -->
+                    <!-- Récupération des lignes de la bdd -->
                     <?php
                         while ($row = mysqli_fetch_assoc($result)) 
                         {
@@ -71,6 +72,7 @@
 
             </table>
 
+            <!-- Boutons permettant d'accéder à la page d'ajout ou de recherche -->
             <button class="button" onclick="window.location.href='ajout.php';"> Nouveau </button>
             <button class="button is-white" onclick="window.location.href='search.php';"> Rechercher </button>
         </div>

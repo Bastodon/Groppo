@@ -1,6 +1,8 @@
 <?php
+        //Récupération de la DB initiale//
         require_once('db.php');
 
+        //Lorsque le formulaie est soumis, ce script ci-dessous se lance pour générer une requête UPDATE//
         if (count($_POST)>0) 
         {
             mysqli_query($con,"UPDATE contacts SET nom='" . $_POST['nom'] . "',
@@ -11,6 +13,7 @@
             header("Location: index.php");
         }
 
+        // [result] est obtenu à partir de l'ID récupérée dans l'index. [lig] quand à lui permet de récupérer les données qui lui sont liées et qui seront affichées sur l'interface //
         $result = mysqli_query($con,"SELECT * FROM contacts WHERE id='" . $_GET['id'] . "'");
         $lig = mysqli_fetch_array($result);
 
@@ -37,12 +40,15 @@
 
         <div class="ajout-main">
             
+            <!-- Le formulaire d'edition commence ici -->
+
             <form name="update" action="" method="post">
                 <div class="field" hidden>
                     <label for="nom" class="label">ID</label>
                     <div class="control">
                         <input type="text" class="input is-danger" size="50" id="id" name="id" value="<?php echo $lig['id']; ?>" />
                     </div>
+                    <!-- Si l'ID est déjà utilisé par une autre entrée, cette entrée sera écrasée et perdue -->
                     <p class="help is-danger">À éditer à vos risques et périls...</p>
                 </div>
 

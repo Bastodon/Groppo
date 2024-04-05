@@ -7,11 +7,11 @@
     if(is_object($dataJSON)){
         $con = mysqli_connect("".$dataJSON->host,"".$dataJSON->user,"".$dataJSON->password,"". $dataJSON->database, "". $dataJSON->port);
     }else{
-        $con = mysqli_connect("localhost","root","","sql_groppo");
+        printf("Echec de connexion. Verifiez vos entrées dans connect.json");
     }
 
     if (mysqli_connect_errno()) {
         printf("", mysqli_connect_error());
     }
-    
+
 ?>

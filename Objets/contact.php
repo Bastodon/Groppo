@@ -1,6 +1,5 @@
 <?php
 
-// N'a pas été utilisé pour ce projet //
 class contact
 {
     private $id;

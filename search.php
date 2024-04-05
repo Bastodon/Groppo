@@ -1,4 +1,5 @@
 <?php
+    // Récupération de la base de données initiale //
     require_once('db.php');
     $query = "SELECT * FROM contacts";
     $result = mysqli_query($con, $query);
@@ -86,7 +87,7 @@
 
             <table class="table is-bordered">
 
-                <!-- Affichage des résultats. Si aucune entrée n'est donnée, le tableau entier est montré par défaut. -->
+                <!-- Affichage des résultats. Si aucune entrée n'est donnée, le tableau standard est montré par défaut. -->
                 <?php
                     if (isset($_POST['submit'])){
                         $search=$_POST['search'];
@@ -128,7 +129,7 @@
 
                 <tbody>
 
-                    <!-- Récupération de la bdd. $i servira à récupérer l'id de chaque entrée pour les requêtes -->
+                    <!-- Récupération des lignes de la bdd -->
                     <?php
                         while ($row = mysqli_fetch_assoc($result)) 
                         {
